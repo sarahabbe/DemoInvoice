@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Test" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1536,2267.2" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabf="clr-namespace:UiPath.Mail.Activities.Business.ForEachMail;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Test" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1084.8,2619.2" sap2010:WorkflowViewState.IdRef="Test_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabf="clr-namespace:UiPath.Mail.Activities.Business.ForEachMail;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
       <x:String>System.Activities</x:String>
@@ -66,13 +66,13 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetEmailAttachment" sap:VirtualizedContainerService.HintSize="667.2,2202.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetEmailAttachment" sap:VirtualizedContainerService.HintSize="952.8,2554.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="625.6,2109.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence sap:VirtualizedContainerService.HintSize="911.2,2461.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <Sequence.Variables>
         <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="MailMessages" />
         <Variable x:TypeArguments="x:String" Name="PDFString" />
@@ -82,7 +82,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <umab:ExchangeApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" SharedMailbox="{x:Null}" Account="sarah.abbett@uipath.com" DisplayName="Use Outlook 365" EmailAddress="sarah.abbett@uipath.com" sap:VirtualizedContainerService.HintSize="584,1020" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_1" UseConnectionService="False">
+      <umab:ExchangeApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" SharedMailbox="{x:Null}" Account="sarah.abbett@uipath.com" DisplayName="Use Outlook 365" EmailAddress="sarah.abbett@uipath.com" sap:VirtualizedContainerService.HintSize="869.6,1020" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_1" UseConnectionService="False">
         <umab:ExchangeApplicationCard.ApplicationId>
           <InArgument x:TypeArguments="x:String">
             <Literal x:TypeArguments="x:String" Value="" />
@@ -119,7 +119,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[CurrentMail.Subject]" />
-                      <umab:SaveMailAttachmentsX Attachments="{x:Null}" DisplayName="Save Email Attachments" Filter="*.pdf*" FolderPath="Data" sap:VirtualizedContainerService.HintSize="433.6,208.8" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_1" Message="[CurrentMail]" OverwriteExisting="False" />
+                      <umab:SaveMailAttachmentsX Attachments="{x:Null}" DisplayName="Save Email Attachments" Filter="*.pdf*" FolderPath="Data" sap:VirtualizedContainerService.HintSize="433.6,208.8" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_1" Message="[CurrentMail]" OverwriteExisting="True" />
                     </Sequence>
                   </ActivityAction>
                 </umab:ForEachEmailX.Body>
@@ -140,7 +140,7 @@
           </InArgument>
         </umab:ExchangeApplicationCard.TenantId>
       </umab:ExchangeApplicationCard>
-      <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="Data" sap:VirtualizedContainerService.HintSize="584,956.8" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst">
+      <ui:ForEachFileX DisplayName="For Each File in Folder" Folder="Data" sap:VirtualizedContainerService.HintSize="869.6,1308.8" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst">
         <ui:ForEachFileX.Body>
           <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
             <ActivityAction.Argument1>
@@ -149,19 +149,19 @@
             <ActivityAction.Argument2>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
             </ActivityAction.Argument2>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,722.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="836,1074.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <Sequence.Variables>
                 <Variable x:TypeArguments="s:String[]" Name="PDFArray" />
-                <Variable x:TypeArguments="x:String" Name="Total" />
+                <Variable x:TypeArguments="x:Int32" Name="Total" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[CurrentFile.ToString]" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[PDFString]" />
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[PDFString]" />
-              <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[CurrentFile.ToString]" sap:VirtualizedContainerService.HintSize="794.4,60" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[PDFString]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="794.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[PDFString]" />
+              <Assign sap:VirtualizedContainerService.HintSize="794.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s:String[]">[PDFArray]</OutArgument>
                 </Assign.To>
@@ -169,21 +169,48 @@
                   <InArgument x:TypeArguments="s:String[]">[Split(PDFString, "Total")]</InArgument>
                 </Assign.Value>
               </Assign>
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Array1&quot; + PDFArray(2)]" />
-              <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="794.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Array1&quot; + PDFArray(2)]" />
+              <Assign sap:VirtualizedContainerService.HintSize="794.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                 <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[Total]</OutArgument>
+                  <OutArgument x:TypeArguments="x:Int32">[Total]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[Split(PDFArray(2),Environment.NewLine)(0)]</InArgument>
+                  <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(Split(PDFArray(2),Environment.NewLine)(0).Replace(",",""))]</InArgument>
                 </Assign.Value>
               </Assign>
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;Total Price: &quot; + Total]" />
-              <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_3" Priority="Normal" QueueType="InvoicePaymentQueue">
-                <ui:AddQueueItem.ItemInformation>
-                  <InArgument x:TypeArguments="x:String" x:Key="PDFString">[PDFString]</InArgument>
-                </ui:AddQueueItem.ItemInformation>
-              </ui:AddQueueItem>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="794.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[&quot;Total Price: &quot; + Total.ToString]" />
+              <If Condition="[Total &gt; 10000]" sap:VirtualizedContainerService.HintSize="794.4,374.4" sap2010:WorkflowViewState.IdRef="If_1">
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="375.2,215.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[CurrentFile.ToString]" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="ReadPDFText_2" Range="All" Text="[PDFString]" />
+                    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_3" Priority="Normal" QueueType="InvoiceForApprovalQueue">
+                      <ui:AddQueueItem.ItemInformation>
+                        <InArgument x:TypeArguments="x:String" x:Key="PDFString">[PDFString]</InArgument>
+                      </ui:AddQueueItem.ItemInformation>
+                    </ui:AddQueueItem>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="375.2,215.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[CurrentFile.ToString]" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="ReadPDFText_3" Range="All" Text="[PDFString]" />
+                    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_4" Priority="Normal" QueueType="InvoicePaidQueue">
+                      <ui:AddQueueItem.ItemInformation>
+                        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+                      </ui:AddQueueItem.ItemInformation>
+                    </ui:AddQueueItem>
+                  </Sequence>
+                </If.Else>
+              </If>
             </Sequence>
           </ActivityAction>
         </ui:ForEachFileX.Body>
